@@ -4,14 +4,14 @@ import dynamic from "next/dynamic";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 
-const FontAwesomeIcon = dynamic(
+const FontAwesomeIcon: any = dynamic(
   () => import("@fortawesome/react-fontawesome").then((mod) => mod.FontAwesomeIcon),
   {
     ssr: false,
   }
-) as React.ComponentType<FontAwesomeIconProps>;
+);
 
-export const SocialList = () => {
+export const SocialList: React.FC = () => {
   const socialKeys = Object.keys(blogConfig.account.social);
   return (
     <>
