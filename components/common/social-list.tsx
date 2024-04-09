@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 
-const FontAwesomeIcon: any = dynamic(
+const FontAwesomeIcon = dynamic(
   () => import("@fortawesome/react-fontawesome").then((mod) => mod.FontAwesomeIcon),
   {
     ssr: false,
