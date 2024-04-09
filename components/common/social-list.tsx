@@ -3,14 +3,13 @@ import { IconName } from "@fortawesome/fontawesome-svg-core";
 import dynamic from "next/dynamic";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const FontAwesomeIcon = dynamic(
   () => import("@fortawesome/react-fontawesome").then((mod) => mod.FontAwesomeIcon),
   {
     ssr: false,
   }
-) as typeof Component<FontAwesomeIconProps>
+) as React.ComponentType<FontAwesomeIconProps>;
 
 export const SocialList = () => {
   const socialKeys = Object.keys(blogConfig.account.social);
