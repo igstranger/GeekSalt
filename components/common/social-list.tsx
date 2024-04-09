@@ -3,8 +3,9 @@ import { IconName } from "@fortawesome/fontawesome-svg-core";
 import dynamic from "next/dynamic";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
+export const SocialList: React.FC = () => {
 
-const FontAwesomeIcon = dynamic(
+const FontAwesomeIcon: any = dynamic(
   () => import("@fortawesome/react-fontawesome").then((mod) => mod.FontAwesomeIcon),
   {
     ssr: false,
